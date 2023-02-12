@@ -1,5 +1,5 @@
 # Currency Converter
-![Animacja](../currency%20converter/images/Animation.gif)
+![Animacja](https://raw.githubusercontent.com/Emilia-Fabisiak/currency-converter2/46be371b14438e04ec64cf2bfa96aaa629d686c3/images/Animation.gif)
 ## Demo
 You can visit my currency converter on this website: 
 https://emilia-fabisiak.github.io/currency-converter2/
