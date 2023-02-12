@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moduł 4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+        <form class="form js-form">
+        <fieldset class="form__fieldset"> 
+            <legend class="form__legend">Kalkulator walutowy</legend>
+<p>
+    <label>
+        <span class="form__labelText">
+        Wybierz walutę:    
+        </span>
+         <select name="currency" class="form__field js-currency">
+            <option value="USD">Dolar amerykański</option>
+            <option value="EUR">Euro</option>
+            <option value="GBP">Funt brytyjski</option>
+         </select>
+    </label>
+</p>
+<p>
+    <label>
+        <span class="form__labelText">
+            Podaj kwotę*:    
+            </span>
+         <input class="form__field js-amount" required type="number" min="0" step="0.01" placeholder="kwota w PLN">
+    </label>
+</p>
+<label>
+<span class="form__labelText">
+    Wynik:    
+    </span>  
+    <input class="form__field js-result" readonly>  
+</label>
+<div>
+    <p>
+        <button class="form__button js-button">Przelicz</button>
+        <button class="form__button js-reset" type="reset">Wyczyść</button>
+    </p>
+</div>
+ </fieldset>
+</form>
+<footer class="footer">
+   <p>
+     Kurs walut wg NBP z dnia 2023-01-20 (Tabela nr 014/A/NBP/2023)
+   </p> 
+</footer>
+</body>
+</html>
