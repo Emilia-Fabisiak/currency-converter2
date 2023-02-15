@@ -4,29 +4,31 @@
     const currencyElement = document.querySelector(".js-currency");
     const resultElement = document.querySelector(".js-result");
 
-    formElement.addEventListener("submit", (event) => {
-        event.preventDefault();
-
+    const calculateResult = (amount, currency) => {
         const rateEUR = 4.71;
         const rateUSD = 4.35;
         const rateGBP = 5.37;
 
-        const currency = currencyElement.value;
-        const amount = +amountElement.value;
-        let result = resultElement.value;
-
         switch (currency) {
             case "EUR":
-                result = amount / rateEUR;
-                break;
+                return amount / rateEUR;
+                
             case "USD":
-                result = amount / rateUSD;
-                break;
+                return amount / rateUSD;
+                
             case "GBP":
-                result = amount / rateGBP;
-                break;
+                return amount / rateGBP;
         };
+    }
 
+    formElement.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const currency = currencyElement.value;
+        const amount = +amountElement.value;
+
+        let result = calculateResult(amount, currency);
+        
         resultElement.value = `${amountElement.value} PLN = ${result.toFixed(2)} ${currency}`;
     });
 }
