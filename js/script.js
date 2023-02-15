@@ -16,23 +16,25 @@
         }
     };
     
-    const init = () => {
-        const formElement = document.querySelector(".js-form");
-
-    formElement.addEventListener("submit", (event) => {
+    const onFormSubmit = (event) => {
         event.preventDefault();
-
+    
         const amountElement = document.querySelector(".js-amount");
         const currencyElement = document.querySelector(".js-currency");
         const resultElement = document.querySelector(".js-result");
-
+    
         const currency = currencyElement.value;
         const amount = +amountElement.value;
-
+    
         let result = calculateResult(amount, currency);
-
+    
         resultElement.value = `${amountElement.value} PLN = ${result.toFixed(2)} ${currency}`;
-        });
+        }
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", onFormSubmit);
     }; 
     
     init();
