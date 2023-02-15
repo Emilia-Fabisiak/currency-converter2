@@ -15,21 +15,25 @@
                 return amount / rateGBP;
         }
     };
+
+    const updateResultText = (amountElement, result, currency) => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.value = `${amountElement.value} PLN = ${result.toFixed(2)} ${currency}`;
+    };
     
     const onFormSubmit = (event) => {
         event.preventDefault();
-    
+        
         const amountElement = document.querySelector(".js-amount");
         const currencyElement = document.querySelector(".js-currency");
-        const resultElement = document.querySelector(".js-result");
     
         const currency = currencyElement.value;
         const amount = +amountElement.value;
     
-        let result = calculateResult(amount, currency);
-    
-        resultElement.value = `${amountElement.value} PLN = ${result.toFixed(2)} ${currency}`;
-        }
+        const result = calculateResult(amount, currency);
+
+        updateResultText(amountElement, result, currency);
+    };
 
     const init = () => {
         const formElement = document.querySelector(".js-form");
