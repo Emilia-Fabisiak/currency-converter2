@@ -11,4 +11,11 @@ html {
     max-width: 600px;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../images/pieniadze.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 658px;
 }
